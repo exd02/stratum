@@ -21,6 +21,7 @@ parsers_sv2 = { path = "../sv2/parsers-sv2" }
 framing_sv2 = { path = "../sv2/framing-sv2" }
 codec_sv2 = { path = "../sv2/codec-sv2", features = ["noise_sv2"]}
 common_messages_sv2 = { path = "../sv2/subprotocols/common-messages" }
+extensions_sv2 = { path = "../sv2/extensions-sv2" }
 job_declaration_sv2 = { path = "../sv2/subprotocols/job-declaration" }
 mining_sv2 = {path = "../sv2/subprotocols/mining" }
 template_distribution_sv2 = { path = "../sv2/subprotocols/template-distribution" }
@@ -76,5 +77,11 @@ doc = false
 [[bin]]
 name = "end_to_end_serialization_for_template_distribution_messages"
 path = "fuzz_targets/end_to_end_serialization_for_template_distribution_messages.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "end_to_end_serialization_for_extensions_messages"
+path = "fuzz_targets/end_to_end_serialization_for_extensions_messages.rs"
 test = false
 doc = false
