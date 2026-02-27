@@ -24,6 +24,8 @@ common_messages_sv2 = { path = "../sv2/subprotocols/common-messages" }
 job_declaration_sv2 = { path = "../sv2/subprotocols/job-declaration" }
 mining_sv2 = {path = "../sv2/subprotocols/mining" }
 template_distribution_sv2 = { path = "../sv2/subprotocols/template-distribution" }
+sv1_api = { path = "../sv1" }
+serde_json = "1.0"
 
 [[bin]]
 name = "deserialize_sv2frame"
@@ -76,5 +78,11 @@ doc = false
 [[bin]]
 name = "end_to_end_serialization_for_template_distribution_messages"
 path = "fuzz_targets/end_to_end_serialization_for_template_distribution_messages.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "sv1_json_rpc_parsing"
+path = "fuzz_targets/sv1_json_rpc_parsing.rs"
 test = false
 doc = false
